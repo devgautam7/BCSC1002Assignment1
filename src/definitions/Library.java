@@ -49,3 +49,25 @@ Override
     }
 
     /**
+
+     * This method will set the Information of books available in Library.
+     */
+    public void setBooksInLibrary() {
+        booksThatAreCurrentlyAvailable[0].setNameOfTheBook(" Harry Potter and the chamber of secrets");
+        booksThatAreCurrentlyAvailable[0].setNameOfTheAuthorOfTheBook("J.K. Rowling");
+        booksThatAreCurrentlyAvailable[0].setThirteenDigitISBNNumberOfTheBook("6822945789728");
+        booksThatAreCurrentlyAvailable[1].setNameOfTheBook("Life and Death");
+        booksThatAreCurrentlyAvailable[1].setNameOfTheAuthorOfTheBook("By Stephenie Meyer");
+        booksThatAreCurrentlyAvailable[1].setThirteenDigitISBNNumberOfTheBook("2456899076538");
+        booksThatAreCurrentlyAvailable[2].setNameOfTheBook("A Passage to India");
+        booksThatAreCurrentlyAvailable[2].setNameOfTheAuthorOfTheBook("By E.M. Froster");
+        booksThatAreCurrentlyAvailable[2].setThirteenDigitISBNNumberOfTheBook("7996424689125");
+        booksThatAreCurrentlyAvailable[3].setNameOfTheBook("Midnight's Children");
+        booksThatAreCurrentlyAvailable[3].setNameOfTheAuthorOfTheBook("By Salman Rushdie");
+        booksThatAreCurrentlyAvailable[3].setThirteenDigitISBNNumberOfTheBook("4667990876547");
+        booksThatAreCurrentlyAvailable[4].setNameOfTheBook("The Good Soldier");
+        booksThatAreCurrentlyAvailable[4].setNameOfTheAuthorOfTheBook("By Ford Madox Ford");
+        booksThatAreCurrentlyAvailable[4].setThirteenDigitISBNNumberOfTheBook("34566781345599");
+    }
+
+    /**
