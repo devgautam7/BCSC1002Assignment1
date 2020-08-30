@@ -34,6 +34,7 @@ public class Student {
             this.namesOfTheBooksIssuedByTheStudent[initializingBook] = new Book();
         }
     }
+
 public String getNameOfTheStudent() {
         return nameOfTheStudent;
     }
@@ -64,4 +65,29 @@ public String getNameOfTheStudent() {
 
     public void setNamesOfTheBooksIssuedByTheStudent(Book[] namesOfTheBooksIssuedByTheStudent) {
         this.namesOfTheBooksIssuedByTheStudent = namesOfTheBooksIssuedByTheStudent;
+    }
+@Override
+    public String toString() {
+        return "Name of Student: " + getNameOfTheStudent() + ", " +
+                "University Roll Number: " + getUniversityRollNumberOfTheStudent() + ", " +
+                "Number of Books Issued: " + getNumberOfBooksIssuedByTheStudent() + ", " +
+                "Names of Books Issued: " + Arrays.toString(getNamesOfTheBooksIssuedByTheStudent()) + ".";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return getUniversityRollNumberOfTheStudent() == student.getUniversityRollNumberOfTheStudent() &&
+                getNumberOfBooksIssuedByTheStudent() == student.getNumberOfBooksIssuedByTheStudent() &&
+                Objects.equals(getNameOfTheStudent(), student.getNameOfTheStudent()) &&
+                Arrays.equals(getNamesOfTheBooksIssuedByTheStudent(), student.getNamesOfTheBooksIssuedByTheStudent());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getNameOfTheStudent(), getUniversityRollNumberOfTheStudent(), getNumberOfBooksIssuedByTheStudent());
+        result = 31 * result + Arrays.hashCode(getNamesOfTheBooksIssuedByTheStudent());
+        return result;
     }
