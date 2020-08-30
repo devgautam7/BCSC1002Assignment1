@@ -71,3 +71,15 @@ Override
     }
 
     /**
+ * This method will show the Information of books available in Library.
+     */
+    public void showAvailableBooks() {
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.printf("|%-36s %-21s %-21s|\n", "Book Name", "Author Name", "13-Digit ISBN Number");
+        System.out.println("----------------------------------------------------------------------------------");
+        for (int libraryIndex = 0; libraryIndex < MAXIMUM_BOOKS_IN_LIBRARY; libraryIndex++) {
+            System.out.printf("|%-36s %-21s %-21s|\n", booksThatAreCurrentlyAvailable[libraryIndex].getNameOfTheBook(), booksThatAreCurrentlyAvailable[libraryIndex].getNameOfTheAuthorOfTheBook(), booksThatAreCurrentlyAvailable[libraryIndex].getThirteenDigitISBNNumberOfTheBook());
+        }
+        System.out.println("----------------------------------------------------------------------------------");
+    }
+}
